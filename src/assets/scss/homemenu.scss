@@ -1,0 +1,26 @@
+.home{
+    .menu{
+        color: #647f87;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        text-align: center;
+
+        font-weight: 600;
+        font-size: 16pt;
+        
+        margin: 0 10px;
+
+        height: 20em;
+
+        align-content: center;
+
+        .menuitem{
+            width: 100%;
+            background-color: #fff;
+            height: 5em;
+            line-height: 5em;
+        }
+    }
+}
