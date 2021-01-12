@@ -1,6 +1,6 @@
 <template>
-    <div class="GuestRound" style="width:100%; margin-top:50px;">
-        <Clock :exerciseSeconds="60"/>
+    <div class="GuestRound">
+        <Clock :exerciseSeconds="exerciseSeconds"/>
     </div>
 </template>
 
@@ -9,6 +9,11 @@ import { defineComponent } from 'vue'
 import Clock from '@/components/training/Clock.vue'
 
 export default defineComponent({
+    data() {
+        return {
+            exerciseSeconds: 30
+        }
+    },
     components:{
         Clock
     }
