@@ -36,7 +36,7 @@
             placeholder="Name"
             v-model="exercise.displayName"
           />
-          <input type="time" v-model="exercise.exerciseDuration" />
+          <input type="time" v-model="exercise.exerciseDuration" step="1" min="00:00:00" max="00:12:00"/>
           <button @click="deleteExercise(exercise.id)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@
         </div>
       </div>
       <div class="gosave">
-          <button class="goButton">
+          <button class="goButton" @click="goToRound">
               Go
           </button>
             <!-- <button class="saveButton" disabled>
@@ -81,7 +81,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import { Exercise, Training } from "@/data/interfaces/Training.ts"
+import { Exercise, Training, ExerciseState } from "@/data/interfaces/Training.ts"
 import { trainingStore } from "@/store/trainingStore"
 import { v4 as uuid } from "@lukeed/uuid"
 
@@ -99,8 +99,9 @@ export default defineComponent({
      }
       this.training.exercises.push({
         id: uuid(),
-        displayName: "",
-        exerciseDuration: defaultDuration
+        displayName: "laufen",
+        exerciseDuration: defaultDuration,
+        state: ExerciseState.NOTSTARTET
       });
     },
     deleteExercise(id: string) {
@@ -108,6 +109,9 @@ export default defineComponent({
       if (indexOfItem !== -1) {
         this.training.exercises.splice(indexOfItem, 1)
       }
+    },
+    goToRound(){
+      this.$router.push({name: "round"})
     }
   },
   mounted() {
