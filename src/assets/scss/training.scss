@@ -1,0 +1,40 @@
+#trainingForm{
+    .baseSettings{
+        padding: 1em;
+        label {
+            margin-right: 0.5em;
+        }
+        .trainingtitleinput{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+            input {
+                flex: 2;
+            }
+        }
+        .roundsandpause{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            justify-content: space-between;
+            div {
+                margin-right:10px;
+            }
+        }
+
+    }
+    
+
+    input{
+        background-color: #1d2223;
+        height: 2.8em;
+        padding: 3px 5px;
+        border-radius: 5px;
+        border: 0;
+        color: #fff;
+        outline: none;
+    }
+}

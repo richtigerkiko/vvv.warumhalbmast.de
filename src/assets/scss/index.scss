@@ -1,4 +1,6 @@
-@import 'homemenu.scss';
+@import "homemenu.scss";
+@import "training.scss";
+// @import "bootstrap/scss/bootstrap.scss";
 
 html,
 body {
@@ -21,7 +23,7 @@ body {
 
 .title {
     text-align: center;
-    margin-top: 5em;
+    padding-top: 5em;
     $letterSpace: 1em;
 
     h1,
@@ -39,9 +41,23 @@ body {
         font-size: 17px;
         margin-top: -12px;
     }
+
+    &.small {
+        padding-top: 0.5em;
+        font-size: 16pt;
+        letter-spacing: $letterSpace - 0.5;
+        text-indent: $letterSpace - 0.5;
+    }
+
+    &.page {
+        padding-top: 0.2em;
+        font-size: 35pt;
+        letter-spacing: $letterSpace - 0.8;
+        text-indent: $letterSpace - 0.8;
+    }
 }
 
-.GuestRound{
+.GuestRound {
     padding-top: 3.5em;
-    width:100%;
+    width: 100%;
 }

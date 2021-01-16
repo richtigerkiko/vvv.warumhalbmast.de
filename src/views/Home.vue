@@ -5,8 +5,8 @@
       <h2>.warumhalbmast.de</h2>
     </div>
     <div class="menu">
-      <router-link to="/guestround"><div class="menuitem">
-        Gastrunde
+      <router-link to="/training"><div class="menuitem">
+        Training
       </div></router-link>
       <div class="menuitem">
         Placeholder
