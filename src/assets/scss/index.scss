@@ -46,6 +46,7 @@ body {
 
     &.small {
         padding-top: 0.5em;
+        line-height: 15pt;
         font-size: 16pt;
         letter-spacing: $letterSpace - 0.5;
         text-indent: $letterSpace - 0.5;

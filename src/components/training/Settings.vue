@@ -1,7 +1,6 @@
 <template>
     <form v-on:submit.prevent id="trainingForm">
       <div class="baseSettings">
-        <h3>settings:</h3>
         <div class="trainingtitleinput">
           <label for="titleInput">titel:</label>
           <input type="text" id="titleInput" v-model="training.displayName" />
