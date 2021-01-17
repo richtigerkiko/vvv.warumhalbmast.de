@@ -10,6 +10,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { Exercise} from '@/data/interfaces/Training'
+import { getSecondsFromTimeString } from '@/functions/time/calctime.ts'
 
 export default defineComponent({
   props: {
@@ -34,7 +35,7 @@ export default defineComponent({
       return this.canvasSize / 2;
     },
     endTime(): Date {
-      return new Date(this.startTime.getTime() + this.exerciseSeconds! * 1000);
+      return new Date(this.startTime.getTime() + getSecondsFromTimeString(this.exercise!.exerciseDuration) * 1000);
     }
   },
   methods: {
@@ -93,7 +94,7 @@ export default defineComponent({
     },
     calcRemainingPercentOfTime(): number {
       const remainingSeconds = this.calcremainingSeconds();
-      return (remainingSeconds / this.exerciseSeconds!) * 100;
+      return (remainingSeconds / getSecondsFromTimeString(this.exercise!.exerciseDuration)) * 100;
     }
   },
   mounted() {

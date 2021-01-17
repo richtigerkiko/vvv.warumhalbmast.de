@@ -8,7 +8,7 @@
         <div class="roundsandpause">
           <div class="pauseinput">
             <label for="pauseinput">pause:</label>
-            <input type="time" id="pauseinput" v-model="training.pauseDuration" />
+            <input type="time" id="pauseinput" v-model="training.pauseDuration"  step="1" min="00:00:00" max="00:12:00"/>
           </div>
           <div class="roundinput">
             <label for="roundinput">rounds:</label>

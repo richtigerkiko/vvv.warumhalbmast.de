@@ -9,12 +9,18 @@ class TrainingStore extends Store<Training> {
                 id: uuid(),
                 displayName: "",
                 rounds: 3,
-                pauseDuration: "00:30",
-                totalDuration: "00:00",
+                pauseDuration: "00:00:2",
+                totalDuration: "00:00:00",
                 exercises: new Array<Exercise>({
                     id: uuid(),
                     displayName: "laufen",
-                    exerciseDuration: "00:00:30",
+                    exerciseDuration: "00:00:10",
+                    state: ExerciseState.NOTSTARTET
+                } as Exercise,
+                {
+                    id: uuid(),
+                    displayName: "raufen",
+                    exerciseDuration: "00:00:08",
                     state: ExerciseState.NOTSTARTET
                 } as Exercise)
         };
